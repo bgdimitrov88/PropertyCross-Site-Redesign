@@ -5,17 +5,104 @@
   <meta name="description" content="Helping you select a cross-platform mobile framework - Apps using jQuery Mobile, Sencha Touch, Titanium and more">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/main.css" type="text/css">
-  <script type="text/javascript" href="http://localhost:8080/ga.js"></script>
+  <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/ga.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gty8sdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <div class="container">
     
-<h2>Framework page</h2>
 
-<h2>Screenshots for framework go here</h2>
+<header class="row">
+  <div class="col-xs-12 header-main">
+    <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
+    </a>
+    <a href="https://github.com/tastejs/PropertyCross/archive/master.zip" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/download.png">Download</a>
+    <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub</a>
+    <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
+  </div>
+</header>
+<section class="row framework-info">
+  <div class="col-xs-12">
+    <h1>
+      mgwt <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/mgwt/mgwt.png"/>
+    </h1>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <p><a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a>  (GWT) is an open source set of tools that allows developers to create web apps in Java. GWT compiles Java into an optimised JavaScript application. GWT is most often used for large-scale web applications, with the strongly typed nature of Java making it easier to maintain a large codebase.</p>
+<p><a href="http://www.m-gwt.com/">mgwt</a> is an open source mobile widget framework build using GWT. mgwt provides a number of UI widgets, CSS styles and a PhoneGap API which make it easier to develop native-like applications using GWT.</p>
+<p>The mgwt PropertyCross implementation is structured using the popular GWT <a href="https://developers.google.com/web-toolkit/doc/latest/DevGuideMvpActivitiesAndPlaces">&#39;Activities and Places&#39;</a> pattern.</p>
+<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/mgwt'>see the github source</a>.</p>
+
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h3>Related links</h3>
+    
+      <p>
+        <a href="http://www.m-gwt.com">Official Website</a>The official website hosts many useful resources including Javadoc documentation and video talks.
+      </p>
+      <p>
+        <a href="https://github.com/mgwt/mgwt/wiki">Project Wiki</a>The project&#x27;s Github wiki.
+      </p>
+      <p>
+        <a href="http://mobilegwt.appspot.com/showcase/">Showcase</a>A showcase of apps made using mgwt. This is really useful to visit when trying to get a feel for a framework.
+      </p>
+      <p>
+        <a href="http://blog.daniel-kurka.de/">Official blog</a>The mgwt blog provides information on future releases and also shows interesting examples of mgwt applications.
+      </p>
+      <p>
+        <a href="https://github.com/mgwt/mgwt">Source code</a>The full source code for mgwt is available on Github.
+      </p>
+      <p>
+        <a href="https://groups.google.com/forum/#!forum/mgwt">mgwt Google Group</a>An active Google group focused on questions and issues found with mgwt.
+      </p>
+    
+    <p>
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=mgwt&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      </a>
+    </p>  </div>
+</section>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                var label;
+                
+                if(count === 0) {
+                  label = "No known issues";
+                } else if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count < 30) {
+                  label = count + " Known issues";
+                } else {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>

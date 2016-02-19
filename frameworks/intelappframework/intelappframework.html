@@ -5,17 +5,98 @@
   <meta name="description" content="Helping you select a cross-platform mobile framework - Apps using jQuery Mobile, Sencha Touch, Titanium and more">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/main.css" type="text/css">
-  <script type="text/javascript" href="http://localhost:8080/ga.js"></script>
+  <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/ga.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gty8sdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <div class="container">
     
-<h2>Framework page</h2>
 
-<h2>Screenshots for framework go here</h2>
+<header class="row">
+  <div class="col-xs-12 header-main">
+    <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
+    </a>
+    <a href="https://github.com/tastejs/PropertyCross/archive/master.zip" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/download.png">Download</a>
+    <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub</a>
+    <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
+  </div>
+</header>
+<section class="row framework-info">
+  <div class="col-xs-12">
+    <h1>
+      Intel App Framework <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/intelappframework/intelappframework.png"/>
+    </h1>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <p><a href="http://app-framework-software.intel.com/">Intel App Framework</a> is a framework for building cross-platform mobile application using HTML5 technologies. The framework started life as jqMobi, a mobile optimised version of jQuery, which was created by the team behind <a href="http://www.appmobi.com/">appMobi</a>. Intel acquired the jqMobi tools and staff in February 2013.</p>
+<p>Intel App Framework is free and open sourced under an MIT licence. Intel also offer <a href="http://html5dev-software.intel.com/">XDK</a>, which is a a full suite of tools built around the App Framework. XDK adds an IDE, build tools and an emulator.</p>
+<p>Along with its lightweight JavaScript library, Intel App Framework provides a basic <a href="http://app-framework-software.intel.com/docmvc.php">MVC framework</a> and many UI components. Rather than mimicking the native look and feel, the framework has opted for providing its own styles which looks the same across all platforms. Styles can be customised using the framework &quot;<a href="http://app-framework-software.intel.com/style.php">Style Builder</a>&quot;. The Intel App Framework version of PropertyCross uses <a href="https://build.phonegap.com/">PhoneGap Build</a> in order to create the native packages.</p>
+<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/intelappframework'>see the github source</a>.</p>
+
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h3>Related links</h3>
+    
+      <p>
+        <a href="https://app-framework-software.intel.com/api.php">API Reference</a>Provides a detailed description of all the exposed library calls.
+      </p>
+      <p>
+        <a href="https://app-framework-software.intel.com/documentation.php">Official Documentation</a>The official app framework documentation.
+      </p>
+      <p>
+        <a href="https://software.intel.com/en-us/forums/app-framework">Official forums</a>A platform to ask and answer questions related to the framework with support from Intel employees.
+      </p>
+      <p>
+        <a href="http://stackoverflow.com/questions/tagged/appframework">Stackoverflow Questions</a>Stackoverflow questions and answers relating to Intel App Framework.
+      </p>
+    
+    <p>
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=intelappframework&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      </a>
+    </p>  </div>
+</section>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                var label;
+                
+                if(count === 0) {
+                  label = "No known issues";
+                } else if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count < 30) {
+                  label = count + " Known issues";
+                } else {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>

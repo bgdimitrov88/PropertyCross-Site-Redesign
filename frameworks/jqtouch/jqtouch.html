@@ -5,17 +5,103 @@
   <meta name="description" content="Helping you select a cross-platform mobile framework - Apps using jQuery Mobile, Sencha Touch, Titanium and more">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/main.css" type="text/css">
-  <script type="text/javascript" href="http://localhost:8080/ga.js"></script>
+  <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/ga.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gty8sdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <div class="container">
     
-<h2>Framework page</h2>
 
-<h2>Screenshots for framework go here</h2>
+<header class="row">
+  <div class="col-xs-12 header-main">
+    <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
+    </a>
+    <a href="https://github.com/tastejs/PropertyCross/archive/master.zip" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/download.png">Download</a>
+    <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub</a>
+    <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
+  </div>
+</header>
+<section class="row framework-info">
+  <div class="col-xs-12">
+    <h1>
+      jQTouch <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.png"/>
+    </h1>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <p><a href="http://jqtjs.com/">jQTouch</a> is a Zepto/jQuery plugin which provides a framework for developing iOS and Android applications.  It is both open source and free to use.</p>
+<p>jQTouch provides a structure on which to base the HTML, the majority of the application styling, page transition animations and touch based event handling; however, it&#39;s not a fully featured application development solution so this project uses a number of other technologies fill in the gaps:</p>
+<ul>
+<li><a href="http://knockoutjs.com/">Knockout</a> - a JavaScript MVVM framework.</li>
+<li><a href="http://requirejs.org/">RequireJS</a> - a JavaScript file and module loader.</li>
+<li><a href="http://phonegap.com/">PhoneGap</a> - used to wrap the code so that it can be installed as a native application.</li>
+</ul>
+<p>To aid the development process, this project makes use of <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="http://sass-lang.com/">Sass</a> over JavaScript and CSS respectively.</p>
+<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/jqtouch'>see the github source</a>.</p>
+
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h3>Related links</h3>
+    
+      <p>
+        <a href="http://jqtjs.com/">Official Website</a>Hosts a number of useful links related to the project.
+      </p>
+      <p>
+        <a href="https://github.com/senchalabs/jQTouch">Source code</a>The full source code is available on Github.
+      </p>
+      <p>
+        <a href="http://blog.jqtjs.com/">Blog</a>The official blog appears to no longer be updated but provides interesting posts on the development of jQT.
+      </p>
+      <p>
+        <a href="https://twitter.com/jqtouch">jQT on Twitter</a>The official twitter account for jQT.
+      </p>
+    
+    <p>
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=jqtouch&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      </a>
+    </p>  </div>
+</section>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                var label;
+                
+                if(count === 0) {
+                  label = "No known issues";
+                } else if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count < 30) {
+                  label = count + " Known issues";
+                } else {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>

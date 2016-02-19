@@ -5,17 +5,108 @@
   <meta name="description" content="Helping you select a cross-platform mobile framework - Apps using jQuery Mobile, Sencha Touch, Titanium and more">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/main.css" type="text/css">
-  <script type="text/javascript" href="http://localhost:8080/ga.js"></script>
+  <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/ga.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gty8sdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <div class="container">
     
-<h2>Framework page</h2>
 
-<h2>Screenshots for framework go here</h2>
+<header class="row">
+  <div class="col-xs-12 header-main">
+    <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
+    </a>
+    <a href="https://github.com/tastejs/PropertyCross/archive/master.zip" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/download.png">Download</a>
+    <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub</a>
+    <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
+  </div>
+</header>
+<section class="row framework-info">
+  <div class="col-xs-12">
+    <h1>
+      Lungo <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lungo/lungo.png"/>
+    </h1>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <p><a href="http://lungo.tapquo.com/">Lungo</a> is a framework for developing cross-platform applications in HTML5. Lungo applications are run in the browser, similar to other HTML-based frameworks such as jQuery Mobile. Lungo provides 2 main workflows:</p>
+<h3 id="prototyping-in-lungo">Prototyping in Lungo</h3>
+<p>Lungo provides a rich set of classes to help decorate basic HTML5 markup. The markup is then given behaviour and interaction based on the structure by Lungo, without any developer code being required. Lungo&#39;s philosophy is that you should be able to create a prototype of your application to show basic interaction and page flow without having to write any JS yourself.</p>
+<h3 id="application-development-in-lungo">Application Development in Lungo</h3>
+<p>Lungo also provides a JS API to interact and enhance the prototype. The Lungo API is similar to the common functionality you&#39;d see in other mobile frameworks, such as DOM manipulation (through <a href="http://quojs.tapquo.com/">Quo.js</a>), page routing and navigation, storage etc.</p>
+<h3 id="application">Application</h3>
+<p>The application uses as much of the provided Lungo framework as possible. There are areas where we need to pull in some other libraries to ease the development process (similar to something you&#39;d do in a real application). These application dependencies are:</p>
+<ul>
+<li><a href="http://knockoutjs.com/">Knockout</a> as a MVVM framework.</li>
+<li><a href="http://requirejs.org/">Require.js</a> as an AMD implementation.</li>
+<li><a href="https://build.phonegap.com/">PhoneGap</a> as a native application wrapper.</li>
+<li>Maven as a build tool.</li>
+</ul>
+<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/lungo'>see the github source</a>.</p>
+
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h3>Related links</h3>
+    
+      <p>
+        <a href="http://lungo.tapquo.com/">Official Website</a>Lungo&#x27;s official website hosts a number of useful resources including its forum and documentation pages.
+      </p>
+      <p>
+        <a href="https://github.com/tapquo/Lungo.js/">Source Code</a>Lungo&#x27;s full source code is available on Github. 
+      </p>
+      <p>
+        <a href="https://github.com/tapquo/Lungo.js/blob/master/README.md">Getting started guide</a>A comprehensive introduction to the framework covering all the basics and some more advanced features.
+      </p>
+      <p>
+        <a href="https://twitter.com/lungojs">LungoJS on Twitter</a>The twitter account is no longer active but contains links to a number of projects produced using Lungo.
+      </p>
+    
+    <p>
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=lungo&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      </a>
+    </p>  </div>
+</section>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                var label;
+                
+                if(count === 0) {
+                  label = "No known issues";
+                } else if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count < 30) {
+                  label = count + " Known issues";
+                } else {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>

@@ -5,17 +5,98 @@
   <meta name="description" content="Helping you select a cross-platform mobile framework - Apps using jQuery Mobile, Sencha Touch, Titanium and more">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,700" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="http://localhost:8080/styles/main.css" type="text/css">
-  <script type="text/javascript" href="http://localhost:8080/ga.js"></script>
+  <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/ga.js"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'gty8sdv',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
 </head>
 <body>
   <div class="container">
     
-<h2>Framework page</h2>
 
-<h2>Screenshots for framework go here</h2>
+<header class="row">
+  <div class="col-xs-12 header-main">
+    <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
+    </a>
+    <a href="https://github.com/tastejs/PropertyCross/archive/master.zip" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/download.png">Download</a>
+    <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub</a>
+    <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
+  </div>
+</header>
+<section class="row framework-info">
+  <div class="col-xs-12">
+    <h1>
+      Titanium <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/titanium/titanium.png"/>
+    </h1>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <p><a href="http://www.appcelerator.com/">Appcelerator Titanium</a> is a JavaScript-based development platform for iOS and Android development. The JavaScript code runs on the device within an interpreter, and the UI for a Titanium application is entirely native. Titanium development uses the Titanium Studio IDE, and depending on your OS, the Android SDKs and Xcode are also required.</p>
+<p>The Titanium APIs provide an abstraction layer for the Android and iOS UI elements, allowing you to write your view code against the Titanium abstraction. Although, there are some view concepts which have not been abstracted, meaning that developers have to write platform specific view code.</p>
+<p>The Titanium version of the PropertyCross application uses the Model-View-ViewModel (MVVM) pattern, however, Titanium lacks a binding framework, so the View JavaScript code subscribes to the various ViewModel properties.</p>
+<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/titanium'>see the github source</a>.</p>
+
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <h3>Related links</h3>
+    
+      <p>
+        <a href="http://www.appcelerator.com">Official Website</a>The Appcelerator website hosts lots of useful resources including documentation and the Appcelerator blog.
+      </p>
+      <p>
+        <a href="http://docs.appcelerator.com/platform/latest/#!/guide/Quick_Start">Quick Start Guide</a>A comprehensive quick start guide that is an incredibly useful resource to developers looking to create an app with Titanium.
+      </p>
+      <p>
+        <a href="https://twitter.com/appcelerator">Appcelerator on Twitter</a>Regularly updated with information about releases, features and links to articles.
+      </p>
+      <p>
+        <a href="http://stackoverflow.com/questions/tagged/titanium">Titanium on Stackoverflow</a>A variety of questions and answers related to Titanium development on Stackoverflow.
+      </p>
+    
+    <p>
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=titanium&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      </a>
+    </p>  </div>
+</section>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                var label;
+                
+                if(count === 0) {
+                  label = "No known issues";
+                } else if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count < 30) {
+                  label = count + " Known issues";
+                } else {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>
