@@ -39,7 +39,7 @@
 
   </div>
   <div class="col-xs-12 col-sm-6">
-    <h4>Related links</h4>
+    <h3>Related links</h3>
     
       <p>
         <a href="http://docs.sencha.com/touch/2.0.2/#!/api">API Reference</a> - An extensive set of documentation describing the framework&#x27;s API.
@@ -55,7 +55,7 @@
       </p>
     
     <p>
-      <a href="https://github.com/tastejs/PropertyCross/issues?labels=senchatouch2&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=senchatouch2&state=open" class="btn btn-primary github-issue-count-button" />
       </a>
     </p>  </div>
 </section>
@@ -72,7 +72,7 @@
       </a>
     </div>
     
-    <div class="col-xs-12">
+    <div class="col-xs-12 screenshot-container">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/android/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/android/PropertyCross.thumbnail.png"/>
@@ -100,7 +100,7 @@
       </button>
     </div>
     
-    <div class="col-xs-12">
+    <div class="col-xs-12 screenshot-container">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/ios/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/ios/PropertyCross.thumbnail.png"/>
@@ -121,28 +121,43 @@
 </section>
   <section class="row contributors">
     <h4>Framework example contributed by</h4>
-      <div class="profile">
+      <div class="profile" data-user="markrhodes">
         <div class="profile-image">
             <img class="github-img" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/github.png"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/markrhodes/">Mark Rhodes</a>
+          <a href="https://github.com/markrhodes/">Mark Rhodes</a><br>
+          <span class="markrhodes-company"></span><br>
+          <span class="markrhodes-location hidden-xs hidden-sm"></span>
+          <span class="markrhodes-location-full hidden-md hidden-lg"></span><br>
+          <span class="markrhodes-email hidden-xs hidden-sm"></span>
+          <span class="markrhodes-email-full hidden-md hidden-lg"></span>
         </div>
       </div>  
-      <div class="profile">
+      <div class="profile" data-user="joelwilliamsmith">
         <div class="profile-image">
             <img src="http://www.gravatar.com/avatar/6e5b209f9dced24655066d1128a13964"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/joelwilliamsmith/">Joel Smith</a>
+          <a href="https://github.com/joelwilliamsmith/">Joel Smith</a><br>
+          <span class="joelwilliamsmith-company"></span><br>
+          <span class="joelwilliamsmith-location hidden-xs hidden-sm"></span>
+          <span class="joelwilliamsmith-location-full hidden-md hidden-lg"></span><br>
+          <span class="joelwilliamsmith-email hidden-xs hidden-sm"></span>
+          <span class="joelwilliamsmith-email-full hidden-md hidden-lg"></span>
         </div>
       </div>  
-      <div class="profile">
+      <div class="profile" data-user="nwolverson">
         <div class="profile-image">
             <img src="http://www.gravatar.com/avatar/c2fa082fa1ffbab1293262c599d459fb"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/nwolverson/">Nicholas Wolverson</a>
+          <a href="https://github.com/nwolverson/">Nicholas Wolverson</a><br>
+          <span class="nwolverson-company"></span><br>
+          <span class="nwolverson-location hidden-xs hidden-sm"></span>
+          <span class="nwolverson-location-full hidden-md hidden-lg"></span><br>
+          <span class="nwolverson-email hidden-xs hidden-sm"></span>
+          <span class="nwolverson-email-full hidden-md hidden-lg"></span>
         </div>
       </div>  
   </section>
@@ -232,36 +247,7 @@
   </div>
 </section>
 
-<script type="text/javascript">
-    !function() {
-        var buttons = document.getElementsByClassName('github-issue-count-button');
-        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
-            var url = button.href
-                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
-                    .replace(/per_page=[0-9]+/g, '');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.onload = function(e) {
-                var count = JSON.parse(e.target.responseText).length;
-                this.classList.add('issue-count-' + count);
-                
-                // 0 or undefined
-                var label = "No known issues";
-                
-                if(count === 1) {
-                  label = "1 Known issue";
-                } else if(count > 1 && count <= 30) {
-                  label = count + " Known issues";
-                } else if(count > 30) {
-                  label = "30+ Known issues";
-                }
-                
-                this.innerHTML = label;
-            }.bind(button);
-            xhr.send();
-        }
-    }();
-</script>
+<script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/git.js"></script>
   </div>
 </body>
 </html>

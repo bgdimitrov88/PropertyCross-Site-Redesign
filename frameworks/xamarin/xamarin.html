@@ -39,7 +39,7 @@
 
   </div>
   <div class="col-xs-12 col-sm-6">
-    <h4>Related links</h4>
+    <h3>Related links</h3>
     
       <p>
         <a href="https://github.com/xamarin">Source Code</a> - The Xamarin source code is available on Github.
@@ -55,7 +55,7 @@
       </p>
     
     <p>
-      <a href="https://github.com/tastejs/PropertyCross/issues?labels=xamarin&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=xamarin&state=open" class="btn btn-primary github-issue-count-button" />
       </a>
     </p>  </div>
 </section>
@@ -72,7 +72,7 @@
       </a>
     </div>
     
-    <div class="col-xs-12">
+    <div class="col-xs-12 screenshot-container">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/android/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/android/PropertyCross.thumbnail.png"/>
@@ -100,7 +100,7 @@
       </button>
     </div>
     
-    <div class="col-xs-12">
+    <div class="col-xs-12 screenshot-container">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/ios/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/ios/PropertyCross.thumbnail.png"/>
@@ -121,20 +121,30 @@
 </section>
   <section class="row contributors">
     <h4>Framework example contributed by</h4>
-      <div class="profile">
+      <div class="profile" data-user="colineberhardt">
         <div class="profile-image">
             <img src="http://www.gravatar.com/avatar/458f2e0d08d4114f8b323798cfea141d"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/colineberhardt/">Colin Eberhardt</a>
+          <a href="https://github.com/colineberhardt/">Colin Eberhardt</a><br>
+          <span class="colineberhardt-company"></span><br>
+          <span class="colineberhardt-location hidden-xs hidden-sm"></span>
+          <span class="colineberhardt-location-full hidden-md hidden-lg"></span><br>
+          <span class="colineberhardt-email hidden-xs hidden-sm"></span>
+          <span class="colineberhardt-email-full hidden-md hidden-lg"></span>
         </div>
       </div>  
-      <div class="profile">
+      <div class="profile" data-user="sh1989">
         <div class="profile-image">
             <img src="http://www.gravatar.com/avatar/d4534a4d64ddf89c318221d9f0e766da"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/sh1989/">Sam Hogarth</a>
+          <a href="https://github.com/sh1989/">Sam Hogarth</a><br>
+          <span class="sh1989-company"></span><br>
+          <span class="sh1989-location hidden-xs hidden-sm"></span>
+          <span class="sh1989-location-full hidden-md hidden-lg"></span><br>
+          <span class="sh1989-email hidden-xs hidden-sm"></span>
+          <span class="sh1989-email-full hidden-md hidden-lg"></span>
         </div>
       </div>  
   </section>
@@ -224,36 +234,7 @@
   </div>
 </section>
 
-<script type="text/javascript">
-    !function() {
-        var buttons = document.getElementsByClassName('github-issue-count-button');
-        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
-            var url = button.href
-                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
-                    .replace(/per_page=[0-9]+/g, '');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url, true);
-            xhr.onload = function(e) {
-                var count = JSON.parse(e.target.responseText).length;
-                this.classList.add('issue-count-' + count);
-                
-                // 0 or undefined
-                var label = "No known issues";
-                
-                if(count === 1) {
-                  label = "1 Known issue";
-                } else if(count > 1 && count <= 30) {
-                  label = count + " Known issues";
-                } else if(count > 30) {
-                  label = "30+ Known issues";
-                }
-                
-                this.innerHTML = label;
-            }.bind(button);
-            xhr.send();
-        }
-    }();
-</script>
+<script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/git.js"></script>
   </div>
 </body>
 </html>
