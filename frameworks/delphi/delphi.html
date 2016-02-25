@@ -55,7 +55,7 @@
       </p>
     
     <p>
-      <a href="https://github.com/tastejs/PropertyCross/issues?labels=delphi&state=open" class="btn btn-primary github-issue-count-button" />
+      <a href="https://github.com/tastejs/PropertyCross/issues?labels=delphi&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
       </a>
     </p>  </div>
 </section>
@@ -72,7 +72,7 @@
       </button>
     </div>
     
-    <div class="col-xs-12 screenshot-container">
+    <div class="col-xs-12">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/android/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/android/PropertyCross.thumbnail.png"/>
@@ -100,7 +100,7 @@
       </button>
     </div>
     
-    <div class="col-xs-12 screenshot-container">
+    <div class="col-xs-12">
       <div class="screenshot">
         <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/ios/PropertyCross.png">
           <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/ios/PropertyCross.thumbnail.png"/>
@@ -121,24 +121,19 @@
 </section>
   <section class="row contributors">
     <h4>Framework example contributed by</h4>
-      <div class="profile" data-user="">
+      <div class="profile">
           <div class="profile-blank">
             <a href="">Embarcadero</a>
           </div>
-      </div>  
-      <div class="profile" data-user="DelphiABall">
+      </div>
+      <div class="profile">
         <div class="profile-image">
             <img src="http://www.gravatar.com/avatar/5228daef33bc155d8b47a4710db543e5"/>
         </div>
         <div class="profile-info">
-          <a href="https://github.com/DelphiABall/">Stephen Ball</a><br>
-          <span class="DelphiABall-company"></span><br>
-          <span class="DelphiABall-location hidden-xs hidden-sm"></span>
-          <span class="DelphiABall-location-full hidden-md hidden-lg"></span><br>
-          <span class="DelphiABall-email hidden-xs hidden-sm"></span>
-          <span class="DelphiABall-email-full hidden-md hidden-lg"></span>
+          <a href="https://github.com/DelphiABall/">Stephen Ball</a>
         </div>
-      </div>  
+      </div>
   </section>
 <section class="row framework-menu">
   <div class="col-xs-12">
@@ -226,7 +221,36 @@
   </div>
 </section>
 
-<script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/git.js"></script>
+<script type="text/javascript">
+    !function() {
+        var buttons = document.getElementsByClassName('github-issue-count-button');
+        for (var i = 0, button = buttons[i]; i < buttons.length; button = buttons[++i]) {
+            var url = button.href
+                    .replace(/https:\/\/github\.com/, 'https://api.github.com/repos')
+                    .replace(/per_page=[0-9]+/g, '');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function(e) {
+                var count = JSON.parse(e.target.responseText).length;
+                this.classList.add('issue-count-' + count);
+                
+                // 0 or undefined
+                var label = "No known issues";
+                
+                if(count === 1) {
+                  label = "1 Known issue";
+                } else if(count > 1 && count <= 30) {
+                  label = count + " Known issues";
+                } else if(count > 30) {
+                  label = "30+ Known issues";
+                }
+                
+                this.innerHTML = label;
+            }.bind(button);
+            xhr.send();
+        }
+    }();
+</script>
   </div>
 </body>
 </html>
