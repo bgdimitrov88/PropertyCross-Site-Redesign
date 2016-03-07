@@ -3,7 +3,7 @@ const del = require('del');
 const tinySSG = require('tiny-ssg');
 const connect = require('gulp-connect');
 const less = require('gulp-less');
-const minifyCSS = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
 var runSequence = require('run-sequence');
 
 var buildFolder = '_site';
@@ -17,7 +17,7 @@ gulp.task('clean', function() {
 gulp.task('less', function() {
   return gulp.src(['less/**/main.less'])
     .pipe(less())
-    .pipe(minifyCSS())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(buildFolder + '/styles'));
 });
 
@@ -55,14 +55,20 @@ gulp.task('reload-site', function() {
 // Watches for changes and triggers tinyssg or less, followed by site reload
 gulp.task('watch', function(cb) {
   gulp.watch([
-      '_includes/**/*.*',
-      '_layouts/**/*.*',
-      'frameworks/**/*.*'], function() {
-          runSequence('tinyssg', 'reload-site');
-      });
+    '_includes/**/*.*',
+    '_layouts/**/*.*',
+    'frameworks/**/*.*'], function() {
+      runSequence('tinyssg', 'reload-site');
+    }
+  );
+  gulp.watch(['scripts/**/*.*'], function() {
+      runSequence('copy', 'reload-site');
+    }
+  );
   gulp.watch(['less/**/*.less'], function() {
-          runSequence('less', 'reload-site');
-      });
+      runSequence('less', 'reload-site');
+    }
+  );
   cb();
 });
 
