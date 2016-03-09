@@ -1,4 +1,21 @@
 .about {
   padding: 0 @grid-gutter-width / 2;
   font-weight: @font-weight-light;
+  
+  .header-mobile {
+    .hidden-sm;
+    .hidden-md;
+    .hidden-lg;
+  
+    font-weight: @font-weight-light;
+  }
+  
+  @media(max-width: @screen-xs-max) {
+    background-color: @gray-lighter;
+  }
+  
+  //Always show when not on mobile
+  @media(min-width: @screen-md-min) {
+    display: block !important;
+  }
 }

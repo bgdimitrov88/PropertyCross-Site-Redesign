@@ -1,4 +1,4 @@
-.get-involved { 
+.get-involved {  
   // Equal height columns
   display: flex;
   background-color: @gray-lighter;
@@ -22,17 +22,22 @@
   .middle {
     margin: 0 @grid-gutter-width / 2;
   }
-}
-
-@media (max-width: @screen-xs-max) {
-  .get-involved {
-    // No longer displaying columns
-    display: block;
-    padding: 0;
-      
-    .col-xs-12 {
-      margin: @grid-gutter-width / 2 0 0 0;
-      .background-bands(@gray-lighter, @gray-lighter);
-    }
+  
+  @media(min-width: @screen-md-min) {
+    //Always show when not on mobile
+    display: flex !important;
   }
 }
+
+  @media (max-width: @screen-xs-max) {
+    .get-involved {
+      // No longer displaying columns
+      display: block;
+      padding: 0;
+        
+      .col-xs-12 {
+        margin: @grid-gutter-width / 2 0 0 0;
+        .background-bands(@gray-lighter, @gray-lighter);
+      }
+    }
+  }
