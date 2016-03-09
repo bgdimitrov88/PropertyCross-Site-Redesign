@@ -9,14 +9,64 @@
   <script src="/scripts/html5shiv.js"></script>
   <![endif]-->
   <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/ga.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/carousel.js"></script>
+  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/transition.js"></script>
+  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/collapse.js"></script>
   <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/typekit.js"></script>
   <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Switch between menu and close menu buttons
+      $('.navbar-header button img').click(function() {
+        $('.navbar-header button img').toggleClass('hidden');
+      });
+      
+      // Underline active link in navbar and show/hide the corresponding content
+      $('.navbar-nav a').click(function() {
+        var target = $(this).children('span').attr('data-target');
+        var current = $('.navbar-nav span.active').attr('data-target');
+      
+        $('.navbar-nav span.active').toggleClass('active');
+        $(this).children('span').toggleClass('active');
+        
+        $(current).toggleClass('hidden');
+        $(target).toggleClass('hidden');
+        
+        $('.navbar-header button img.close').click();
+      });
+    
+      // Show/hide appropriate download button when navigating the carousel on > XS devices
+      $('.carousel-indicators li, .carousel-control').click(function() {
+        if(!$(this).hasClass('active')) {
+          $('.download-btn').toggleClass('hide');
+        }
+      });
+      
+      // Show/hide appropriate frameworks tab on XS devices
+      $('.framework-tab-headers span').click(function() {
+        var target = $(this).attr('data-target');
+      
+        $('.framework-tab').each(function() {
+          // Hide the currently shown tab
+          if(!$(this).hasClass('hidden')) {
+            $(this).toggleClass('hidden');
+          }
+          
+          // Show the clicked tab
+          if($(this).hasClass(target)) {
+            $(this).removeClass('hidden');
+          }
+        });
+      });
+    });
+  </script>
 </head>
 <body>
-  <div class="container">
+  <div class="container  html5   ">
     
 
-<header class="row">
+<header class="row ">
   <div class="col-xs-12 header-main">
     <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
       <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
@@ -26,120 +76,141 @@
     <a href="http://blog.tastejs.com/" class="btn btn-primary pull-right hidden-xs"><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog</a>
   </div>
 </header>
-<section class="row framework-info">
-  <div class="col-xs-12">
-    <h1>
-      jQTouch <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.png"/>
-    </h1>
-  </div>
-  <div class="col-xs-12 col-sm-6">
-    <p><a href="http://jqtjs.com/">jQTouch</a> is a Zepto/jQuery plugin which provides a framework for developing iOS and Android applications.  It is both open source and free to use.</p>
-<p>jQTouch provides a structure on which to base the HTML, the majority of the application styling, page transition animations and touch based event handling; however, it&#39;s not a fully featured application development solution so this project uses a number of other technologies fill in the gaps:</p>
-<ul>
-<li><a href="http://knockoutjs.com/">Knockout</a> - a JavaScript MVVM framework.</li>
-<li><a href="http://requirejs.org/">RequireJS</a> - a JavaScript file and module loader.</li>
-<li><a href="http://phonegap.com/">PhoneGap</a> - used to wrap the code so that it can be installed as a native application.</li>
-</ul>
-<p>To aid the development process, this project makes use of <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="http://sass-lang.com/">Sass</a> over JavaScript and CSS respectively.</p>
-<p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/jqtouch'>see the github source</a>.</p>
-
-  </div>
-  <div class="col-xs-12 col-sm-6">
-    <h3>Related links</h3>
-    
-      <p>
-        <a href="http://jqtjs.com/">Official Website</a> - Hosts a number of useful links related to the project.
-      </p>
-      <p>
-        <a href="https://github.com/senchalabs/jQTouch">Source code</a> - The full source code is available on Github.
-      </p>
-      <p>
-        <a href="http://blog.jqtjs.com/">Blog</a> - The official blog appears to no longer be updated but provides interesting posts on the development of jQT.
-      </p>
-      <p>
-        <a href="https://twitter.com/jqtouch">jQT on Twitter</a> - The official twitter account for jQT.
-      </p>
-    
-    <p>
-      <a href="https://github.com/tastejs/PropertyCross/issues?labels=jqtouch&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
-      </a>
-    </p>  </div>
-</section>
-<section class="row screenshots">
-  <div class="col-xs-12 screenshots-header">
-    <h1>Screenshots</h1>
-  </div>
-    <div class="col-xs-12 col-sm-6 platform">
-      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/android.png" alt="Android" title="Android"/>
-    </div>
-    <div class="col-sm-6 hidden-xs"> 
-      <a href="https://s3-eu-west-1.amazonaws.com/propertycross/PropertyCross-jqtouch-ce8e28b80dae09684b2022bfece8a13c101c6d24.apk" class="btn btn-primary pull-right">
-        Download APK format
-      </a>
-    </div>
-    
-    <div class="col-xs-12">
-      <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/PropertyCross.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/PropertyCross.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/SearchResults.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/SearchResults.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Property.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Property.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Favourites.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Favourites.thumbnail.png"/>
-        </a>
-      </div></div>
-  
-    <div class="col-xs-12 col-sm-6 platform">
-      <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/ios.png" alt="iOS" title="iOS"/>
-    </div>
-    <div class="col-sm-6 hidden-xs"> 
-      <button class="btn btn-large disabled pull-right" title="Not currently supported, for now you'll need to download the project and build from source" type="button">
-        IPA not available
-      </button>
-    </div>
-    
-    <div class="col-xs-12">
-      <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/PropertyCross.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/PropertyCross.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/SearchResults.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/SearchResults.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Property.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Property.thumbnail.png"/>
-        </a>
-      </div>  <div class="screenshot">
-        <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Favourites.png">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Favourites.thumbnail.png"/>
-        </a>
-      </div></div>
-</section>
-  <section class="row contributors">
-    <h4>Framework example contributed by</h4>
-      <div class="profile">
-        <div class="profile-identicon">
-            <img src="https://github.com/identicons/markrhodes.png"/>
-        </div>
-        <div class="profile-info">
-          <a href="https://github.com/markrhodes/">Mark Rhodes</a>
-        </div>
+<main>
+  <div class="framework-info-wrapper">
+    <section class="row framework-info">
+      <div class="col-xs-12">
+        <h1 class="hidden-xs">
+          jQTouch <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.png"/>
+        </h1>
       </div>
-  </section>
-<section class="row framework-menu">
+      <div class="col-xs-12 col-sm-6">
+        <p><a href="http://jqtjs.com/">jQTouch</a> is a Zepto/jQuery plugin which provides a framework for developing iOS and Android applications.  It is both open source and free to use.</p>
+    <p>jQTouch provides a structure on which to base the HTML, the majority of the application styling, page transition animations and touch based event handling; however, it&#39;s not a fully featured application development solution so this project uses a number of other technologies fill in the gaps:</p>
+    <ul>
+    <li><a href="http://knockoutjs.com/">Knockout</a> - a JavaScript MVVM framework.</li>
+    <li><a href="http://requirejs.org/">RequireJS</a> - a JavaScript file and module loader.</li>
+    <li><a href="http://phonegap.com/">PhoneGap</a> - used to wrap the code so that it can be installed as a native application.</li>
+    </ul>
+    <p>To aid the development process, this project makes use of <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="http://sass-lang.com/">Sass</a> over JavaScript and CSS respectively.</p>
+    <p>To view the code and detailed build steps, <a href='https://github.com/tastejs/PropertyCross/tree/master/jqtouch'>see the github source</a>.</p>
+    
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h3>Related links</h3>
+        
+          <p>
+            <a href="http://jqtjs.com/">Official Website</a> - Hosts a number of useful links related to the project.
+          </p>
+          <p>
+            <a href="https://github.com/senchalabs/jQTouch">Source code</a> - The full source code is available on Github.
+          </p>
+          <p>
+            <a href="http://blog.jqtjs.com/">Blog</a> - The official blog appears to no longer be updated but provides interesting posts on the development of jQT.
+          </p>
+          <p>
+            <a href="https://twitter.com/jqtouch">jQT on Twitter</a> - The official twitter account for jQT.
+          </p>
+        
+        <p>
+          <a href="https://github.com/tastejs/PropertyCross/issues?labels=jqtouch&state=open" class="btn btn-large btn-primary github-issue-count-button" type="button">
+          </a>
+        </p>  </div>
+    </section>
+    <section class="row screenshots carousel" data-interval="false">
+      <div class="col-xs-12 screenshots-header">
+        <h1 class="hidden-xs">Screenshots</h1>
+        <div class="mobile-header">
+          <h1>
+            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
+              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/back.png"></img>
+            </a>
+            jQTouch
+          </h1>
+        </div>
+        
+        <ol class="carousel-indicators">
+          <li class="android active" data-target=".carousel" data-slide-to="0"></li>
+          <li class="ios" data-target=".carousel" data-slide-to="1"></li>
+        </ol>
+        
+          <a href="https://s3-eu-west-1.amazonaws.com/propertycross/PropertyCross-jqtouch-ce8e28b80dae09684b2022bfece8a13c101c6d24.apk" class="btn btn-primary download-btn pull-right  hidden-xs">
+            Download APK format
+          </a>
+          <button class="btn btn-large disabled download-btn pull-right hide hidden-xs" title="Not currently supported, for now you'll need to download the project and build from source" type="button">
+            IPA not available
+          </button>
+      </div>
+      
+      <div class="col-xs-12 carousel-inner">
+          <div class="screenshot-container item active">
+            <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/PropertyCross.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/PropertyCross.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/SearchResults.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/SearchResults.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Property.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Property.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Favourites.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/android/Favourites.thumbnail.png"/>
+              </a>
+            </div></div>
+        
+          <div class="screenshot-container item ">
+            <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/PropertyCross.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/PropertyCross.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/SearchResults.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/SearchResults.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Property.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Property.thumbnail.png"/>
+              </a>
+            </div>  <div class="screenshot">
+              <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Favourites.png">
+                <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/ios/Favourites.thumbnail.png"/>
+              </a>
+            </div></div>
+        
+        <a class="left carousel-control hidden-xs" href=".carousel" role="button" data-slide="prev">
+          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign//assets/left.png"/>
+        </a>
+        <a class="right carousel-control hidden-xs" href=".carousel" role="button" data-slide="next">
+          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign//assets/right.png"/>
+        </a>
+      </div>
+    </section>  </div>
+
+    <section class="row contributors">
+      <h4>Framework example contributed by</h4>
+        <div class="profile">
+          <div class="profile-identicon">
+              <img src="https://github.com/identicons/markrhodes.png"/>
+          </div>
+          <div class="profile-info">
+            <a href="https://github.com/markrhodes/">Mark Rhodes</a>
+          </div>
+        </div>
+    </section></main>
+
+<section class="row framework-menu hidden-xs">
+  <div class="framework-tab-headers">
+    <span data-target="html5-frameworks">HTML5</span> | 
+    <span data-target="compile-to-native-frameworks">Compile to Native</span> | 
+    <span data-target="native-frameworks">Native</span>
+  </div>
   <div class="col-xs-12">
-    <div class="html5-frameworks">
-      <h2>HTML5</h2>
+    <div class="html5-frameworks framework-tab">
+      <h2 class="hidden-xs">HTML5</h2>
           <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.html" class="framework">
             <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.png"/>DevExtreme <span> [JS]</span>
           </a>
@@ -180,8 +251,8 @@
             <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/senchatouch2.png"/>Sencha Touch 2 <span> [JS]</span>
           </a>
     </div>
-    <div class="compile-to-native-frameworks">
-      <h2>COMPILE TO NATIVE</h2>
+    <div class="compile-to-native-frameworks framework-tab hidden">
+      <h2 class="hidden-xs">COMPILE TO NATIVE</h2>
           <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.html" class="framework">
             <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.png"/>AIR<span> [ActionScript]</span>
           </a>
@@ -214,8 +285,8 @@
           </a>
     </div>
   </div>
-  <div class="col-xs-12 native-frameworks">
-    <h2>NATIVE</h2>
+  <div class="col-xs-12 native-frameworks framework-tab hidden">
+    <h2 class="hidden-xs">NATIVE</h2>
           <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/native/native.html" class="framework">
             <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/android.png"/><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/ios.png"/> Android and iOS<span class="hidden-xs"> [Java and Objective-C]</span>
           </a>
