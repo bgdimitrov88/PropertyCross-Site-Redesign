@@ -42,7 +42,7 @@
   </script>
 </head>
 <body>
-  <div class="container">
+  <div class="container {{#if html5}} html5 {{/if}} {{#if compile_to_native}} compile-to-native {{/if}} {{#if native}} native {{/if}}">
     {{{body}}}
   </div>
 </body>
