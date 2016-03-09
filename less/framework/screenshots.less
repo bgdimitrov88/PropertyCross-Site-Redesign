@@ -29,6 +29,21 @@
       .box-shadow(0 5px 10px rgba(0,0,0,.2));
     }
   }
+  
+  .mobile-header {
+    .hidden-sm;
+    .hidden-md;
+    .hidden-lg;
+    float: left;
+    width: 66%;
+    text-align: left;
+    margin-top: 12px;
+    
+    img {
+      vertical-align: baseline;
+    }
+    
+  }
 }
 
 @media(max-width: @screen-xs-max) {
@@ -37,7 +52,8 @@
       text-align: center;
       
       h1 {
-        display: block;
+        font-size: 30px;
+        padding: 0;
       }
     }
     
@@ -48,7 +64,7 @@
     }
     
     .carousel-indicators {
-      margin-left: 0;
+      margin: 4px 0 0 0;
     }
     
     .screenshot-container {
