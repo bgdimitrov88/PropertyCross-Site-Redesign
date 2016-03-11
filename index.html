@@ -9,64 +9,14 @@
   <script src="/scripts/html5shiv.js"></script>
   <![endif]-->
   <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/ga.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/carousel.js"></script>
-  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/transition.js"></script>
-  <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/collapse.js"></script>
   <script type="text/javascript" src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/scripts/typekit.js"></script>
   <link rel="stylesheet" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/styles/main.css" type="text/css">
-  <script type="text/javascript">
-    $(document).ready(function() {
-      // Switch between menu and close menu buttons
-      $('.navbar-header button img').click(function() {
-        $('.navbar-header button img').toggleClass('hidden');
-      });
-      
-      // Underline active link in navbar and show/hide the corresponding content
-      $('.navbar-nav a').click(function() {
-        var target = $(this).children('span').attr('data-target');
-        var current = $('.navbar-nav span.active').attr('data-target');
-      
-        $('.navbar-nav span.active').toggleClass('active');
-        $(this).children('span').toggleClass('active');
-        
-        $(current).toggleClass('hidden');
-        $(target).toggleClass('hidden');
-        
-        $('.navbar-header button img.close').click();
-      });
-    
-      // Show/hide appropriate download button when navigating the carousel on > XS devices
-      $('.carousel-indicators li, .carousel-control').click(function() {
-        if(!$(this).hasClass('active')) {
-          $('.download-btn').toggleClass('hide');
-        }
-      });
-      
-      // Show/hide appropriate frameworks tab on XS devices
-      $('.framework-tab-headers span').click(function() {
-        var target = $(this).attr('data-target');
-      
-        $('.framework-tab').each(function() {
-          // Hide the currently shown tab
-          if(!$(this).hasClass('hidden')) {
-            $(this).toggleClass('hidden');
-          }
-          
-          // Show the clicked tab
-          if($(this).hasClass(target)) {
-            $(this).removeClass('hidden');
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
-  <div class="container   ">
+  <div class="container">
     
 
-<header class="row hidden-xs">
+<header class="row">
   <div class="col-xs-12 header-main">
     <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
       <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png" class="logo" alt="PropertyCross" title="PropertyCross"/>
@@ -79,171 +29,130 @@
     <h3>Property Cross is an opensource project that helps developers select a cross platform mobile framework.</h3>
   </div>
 </header>
-<nav class="row navbar">
-  <div class="container-fluid">
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          <a>
-            <span data-target=".about">About</span>
+<section class="row framework-menu">
+  <div class="col-xs-12">
+    <div class="html5-frameworks">
+      <h2>HTML5</h2>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.png"/>DevExtreme <span> [JS]</span>
           </a>
-        </li>
-        <li>
-          <a>
-            <span class="active" data-target=".framework-menu">Frameworks</span>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/emy/emy.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/emy/emy.png"/>Emy <span> [JS]</span>
           </a>
-        </li>
-        <li>
-          <a>
-            <span data-target=".get-involved">Get involved</span>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/enyo/enyo.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/enyo/enyo.png"/>Enyo <span> [JS]</span>
           </a>
-        </li>
-      </ul>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/famous/famous.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/famous/famous.png"/>Famo.us <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/intelappframework/intelappframework.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/intelappframework/intelappframework.png"/>Intel App Framework <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/ionic/ionic.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/ionic/ionic.png"/>Ionic <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.png"/>jQTouch <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jquerymobile/jquerymobile.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jquerymobile/jquerymobile.png"/>jQuery Mobile <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/kendoui/kendoui.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/kendoui/kendoui.png"/>Kendo UI <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lavaca/lavaca.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lavaca/lavaca.png"/>lavaca <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lungo/lungo.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lungo/lungo.png"/>Lungo <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/onsenui/onsenui.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/onsenui/onsenui.png"/>OnsenUI <span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/senchatouch2.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/senchatouch2.png"/>Sencha Touch 2 <span> [JS]</span>
+          </a>
     </div>
-    <div class="navbar-header">
-      <a class="navbar-brand navbar-left" href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign">
-        <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/logo.png">
+    <div class="compile-to-native-frameworks">
+      <h2>COMPILE TO NATIVE</h2>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.png"/>AIR<span> [ActionScript]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/crosslight/crosslight.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/crosslight/crosslight.png"/>Crosslight<span> [C#]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/delphi.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/delphi.png"/>Delphi<span> [Object Pascal]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/mgwt/mgwt.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/mgwt/mgwt.png"/>mgwt<span> [Java]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/neomad/neomad.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/neomad/neomad.png"/>NeoMAD<span> [Java]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/qt/qt.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/qt/qt.png"/>QT<span> [C++]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/rhomobile/rhomobile.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/rhomobile/rhomobile.png"/>RhoMobile<span> [Ruby]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/titanium/titanium.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/titanium/titanium.png"/>Titanium<span> [JS]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/xamarin.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/xamarin.png"/>Xamarin<span> [C#]</span>
+          </a>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarinmvvmcross/xamarinmvvmcross.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarinmvvmcross/xamarinmvvmcross.png"/>Xamarin MvvmCross<span> [C#]</span>
+          </a>
+    </div>
+  </div>
+  <div class="col-xs-12 native-frameworks">
+    <h2>NATIVE</h2>
+          <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/native/native.html" class="framework">
+            <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/android.png"/><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/ios.png"/> Android and iOS<span class="hidden-xs"> [Java and Objective-C]</span>
+          </a>
+  </div>
+</section>
+
+<section class="row about">
+  <div class="col-xs-12">
+    <h1>About</h1>
+    <p>Developers are now finding themselves having to author applications for a diverse range of mobile platforms (iOS, Android, Windows Phone, ...), each of which have their own &#39;native&#39; development languages, tools and environment.</p>
+    <p>There is an ever growing list of cross-platform frameworks that allow you to minimise the cost and effort of developing mobile apps, but which to choose?</p>
+    <p>To help solve this problem PropertyCross presents a non-trivial application, for searching UK property listings, developed using a range of cross-platform technologies and frameworks. Our aim is to provide developers with a practical insight into the strengths and weaknesses of each framework.</p>
+    <p>This project is part of <a href="http://tastejs.com">TasteJS</a>, which also includes <a href="http://todomvc.com/">TodoMVC</a> - a project that helps developers compare JavaScript frameworks.</p>
+  </div>
+</section>
+<section class="row get-involved">
+  <div class="col-xs-12 col-sm-4">
+    <h3 id="selecting-a-framework">Selecting a Framework</h3>
+    <p>The APK and XAP files for the Android and Windows Phone versions of each framework are available within the project download. For iPhone you will have to build and sign the projects yourself in order to deploy them onto your own device.</p>
+    <p>Some of the frameworks deliver a native user interface, whereas others construct a native-like interface using HTML5 technologies. When selecting a framework it is important to test the end-user experience that the framework delivers and ensure you are happy with any compromises.</p>
+    <p>The code-sharing which can be realistically achieved with each framework varies considerably.</p>
+  </div>
+  <div class="col-xs-12 col-sm-4 middle">
+    <h3 id="the-application">The Application</h3>
+    <p>The app, which is implemented by each framework for each mobile platform, is a tool for searching UK property listings.  This application was selected because it is non-trivial, multi-screen and makes use of a number of device capabilities including page navigation, geolocation, storage and web services.</p>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <h3 id="get-involved">Get Involved</h3>
+    <p>It would be great to see the app implemented in more cross-platform frameworks. If you&#39;re interested in contributing, a good place to start would be the <a href="https://github.com/tastejs/PropertyCross/issues?labels=Framework+Request&amp;page=1&amp;state=open">list of implementation requests</a>, or maybe you&#39;d be interested in adding implementations of the currently supported frameworks for other platforms? It&#39;s all on GitHub at the link above, so fork away! For more detailed implementation notes see the <a href="https://github.com/tastejs/PropertyCross/tree/master/specification">PropertyCross specifications</a>.</p>
+  </div>
+</section>
+
+<div class="row mobile-buttons hidden-lg hidden-md hidden-sm">
+    <div class="col-xs-6">
+      <a href="http://blog.tastejs.com/" class="btn btn-primary">
+        <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog
       </a>
-      
-      <button type="button navbar-right" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/navbar-menu.png">
-        <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/navbar-menu-close.png" class="close hidden">
-      </button>
     </div>
-  </div>
-</nav>
-<main>
-  <section class="row framework-menu ">
-    <div class="framework-tab-headers">
-      <span data-target="html5-frameworks">HTML5</span> | 
-      <span data-target="compile-to-native-frameworks">Compile to Native</span> | 
-      <span data-target="native-frameworks">Native</span>
+    <div class="col-xs-6">
+      <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary">
+        <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub
+      </a>
     </div>
-    <div class="col-xs-12">
-      <div class="html5-frameworks framework-tab">
-        <h2 class="hidden-xs">HTML5</h2>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/devextreme/devextreme.png"/>DevExtreme <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/emy/emy.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/emy/emy.png"/>Emy <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/enyo/enyo.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/enyo/enyo.png"/>Enyo <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/famous/famous.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/famous/famous.png"/>Famo.us <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/intelappframework/intelappframework.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/intelappframework/intelappframework.png"/>Intel App Framework <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/ionic/ionic.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/ionic/ionic.png"/>Ionic <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jqtouch/jqtouch.png"/>jQTouch <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jquerymobile/jquerymobile.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/jquerymobile/jquerymobile.png"/>jQuery Mobile <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/kendoui/kendoui.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/kendoui/kendoui.png"/>Kendo UI <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lavaca/lavaca.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lavaca/lavaca.png"/>lavaca <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lungo/lungo.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/lungo/lungo.png"/>Lungo <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/onsenui/onsenui.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/onsenui/onsenui.png"/>OnsenUI <span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/senchatouch2.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/senchatouch2/senchatouch2.png"/>Sencha Touch 2 <span> [JS]</span>
-            </a>
-      </div>
-      <div class="compile-to-native-frameworks framework-tab hidden">
-        <h2 class="hidden-xs">COMPILE TO NATIVE</h2>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/air/air.png"/>AIR<span> [ActionScript]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/crosslight/crosslight.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/crosslight/crosslight.png"/>Crosslight<span> [C#]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/delphi.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/delphi/delphi.png"/>Delphi<span> [Object Pascal]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/mgwt/mgwt.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/mgwt/mgwt.png"/>mgwt<span> [Java]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/neomad/neomad.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/neomad/neomad.png"/>NeoMAD<span> [Java]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/qt/qt.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/qt/qt.png"/>QT<span> [C++]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/rhomobile/rhomobile.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/rhomobile/rhomobile.png"/>RhoMobile<span> [Ruby]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/titanium/titanium.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/titanium/titanium.png"/>Titanium<span> [JS]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/xamarin.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarin/xamarin.png"/>Xamarin<span> [C#]</span>
-            </a>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarinmvvmcross/xamarinmvvmcross.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/xamarinmvvmcross/xamarinmvvmcross.png"/>Xamarin MvvmCross<span> [C#]</span>
-            </a>
-      </div>
-    </div>
-    <div class="col-xs-12 native-frameworks framework-tab hidden">
-      <h2 class="hidden-xs">NATIVE</h2>
-            <a href="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/frameworks/native/native.html" class="framework">
-              <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/android.png"/><img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/ios.png"/> Android and iOS<span class="hidden-xs"> [Java and Objective-C]</span>
-            </a>
-    </div>
-  </section>
-
-  <section class="row about hidden">
-    <div class="col-xs-12">
-      <h1 class="hidden-xs">About</h1>
-      <h2 class="header-mobile">//PropertyCross is an open-source project that helps developers select a cross-platform mobile framework.</h2>
-      <p>Developers are now finding themselves having to author applications for a diverse range of mobile platforms (iOS, Android, Windows Phone, ...), each of which have their own &#39;native&#39; development languages, tools and environment.</p>
-      <p>There is an ever growing list of cross-platform frameworks that allow you to minimise the cost and effort of developing mobile apps, but which to choose?</p>
-      <p>To help solve this problem PropertyCross presents a non-trivial application, for searching UK property listings, developed using a range of cross-platform technologies and frameworks. Our aim is to provide developers with a practical insight into the strengths and weaknesses of each framework.</p>
-      <p>This project is part of <a href="http://tastejs.com">TasteJS</a>, which also includes <a href="http://todomvc.com/">TodoMVC</a> - a project that helps developers compare JavaScript frameworks.</p>
-    </div>
-  </section>
-  <section class="row get-involved hidden">
-    <div class="col-xs-12 col-sm-4">
-      <h3 id="selecting-a-framework">Selecting a Framework</h3>
-      <p>The APK and XAP files for the Android and Windows Phone versions of each framework are available within the project download. For iPhone you will have to build and sign the projects yourself in order to deploy them onto your own device.</p>
-      <p>Some of the frameworks deliver a native user interface, whereas others construct a native-like interface using HTML5 technologies. When selecting a framework it is important to test the end-user experience that the framework delivers and ensure you are happy with any compromises.</p>
-      <p>The code-sharing which can be realistically achieved with each framework varies considerably.</p>
-    </div>
-    <div class="col-xs-12 col-sm-4 middle">
-      <h3 id="the-application">The Application</h3>
-      <p>The app, which is implemented by each framework for each mobile platform, is a tool for searching UK property listings.  This application was selected because it is non-trivial, multi-screen and makes use of a number of device capabilities including page navigation, geolocation, storage and web services.</p>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <h3 id="get-involved">Get Involved</h3>
-      <p>It would be great to see the app implemented in more cross-platform frameworks. If you&#39;re interested in contributing, a good place to start would be the <a href="https://github.com/tastejs/PropertyCross/issues?labels=Framework+Request&amp;page=1&amp;state=open">list of implementation requests</a>, or maybe you&#39;d be interested in adding implementations of the currently supported frameworks for other platforms? It&#39;s all on GitHub at the link above, so fork away! For more detailed implementation notes see the <a href="https://github.com/tastejs/PropertyCross/tree/master/specification">PropertyCross specifications</a>.</p>
-    </div>
-  </section>
-
-  <div class="row mobile-buttons hidden-lg hidden-md hidden-sm">
-      <div class="col-xs-6">
-        <a href="http://blog.tastejs.com/" class="btn btn-primary">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/blog.png">Blog
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <a href="https://github.com/tastejs/PropertyCross/" class="btn btn-primary">
-          <img src="http://bdimitrov-sl.github.io/PropertyCross-Site-Redesign/assets/git.png">View on GitHub
-        </a>
-      </div>
-  </div>
-</main>
+</div>
 
 <footer class="row">
   <h4 class="footer-intro">
